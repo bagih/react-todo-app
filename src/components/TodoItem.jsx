@@ -38,7 +38,7 @@ const styles = {
         cursor: 'pointer'
     },
     button: {
-        backgroundColor: '#BB0000',
+        backgroundColor: '#C40C0C',
         color: '#fff',
         height: '30px',
         width: '30px',
