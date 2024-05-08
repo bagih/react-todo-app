@@ -8,12 +8,12 @@ const styles = {
     }
 }
 
-const Todos = ({ todos, toggleCompletedItem }) => {
+const Todos = ({ todos, toggleCompletedItem, handleDeleteTodo }) => {
     return (
         <div style={styles.container}>
             {todos.map((todo) => {
                 return (
-                    <TodoItem key={todo.id} todo={todo} toggleCompletedItem={toggleCompletedItem} />
+                    <TodoItem key={todo.id} todo={todo} toggleCompletedItem={toggleCompletedItem} handleDeleteTodo={handleDeleteTodo}/>
                 );
             })}
         </div>
