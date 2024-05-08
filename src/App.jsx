@@ -43,11 +43,18 @@ function App() {
       setTodos(updatedTodos)
     }
 
+    const handleDeleteTodo = (todoId) => {
+      const updatedTodos = todos.filter((todo) => {
+        return todo.id !== todoId
+      })
+      setTodos(updatedTodos)
+    }
+
   return (
     <>
       <div style={styles.container}>
         <h1 style={styles.title}>My Todo List</h1>
-        <Todos todos={todos} toggleCompletedItem={toggleCompletedItem}/>
+        <Todos todos={todos} toggleCompletedItem={toggleCompletedItem} handleDeleteTodo={handleDeleteTodo}/>
       </div>
     </>
   )
