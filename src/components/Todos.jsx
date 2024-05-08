@@ -8,14 +8,14 @@ const styles = {
     }
 }
 
-const Todos = ({todos}) => {
-    return(
+const Todos = ({ todos, toggleCompletedItem }) => {
+    return (
         <div style={styles.container}>
-            { todos.map((todo) => {
-                return(
-                    <TodoItem key={todo.id} todo={todo}/>
+            {todos.map((todo) => {
+                return (
+                    <TodoItem key={todo.id} todo={todo} toggleCompletedItem={toggleCompletedItem} />
                 );
-            }) }
+            })}
         </div>
     )
 }
