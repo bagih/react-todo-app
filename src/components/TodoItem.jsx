@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from "../App";
 
-const TodoItem = ({ todo, toggleCompletedItem, handleDeleteTodo }) => {
+const TodoItem = ({ todo }) => {
+
+    const {toggleCompletedItem, handleDeleteTodo} = useContext(TodoContext)
 
     const getTodoTitleStyle = () => {
         if (todo.isCompleted) {

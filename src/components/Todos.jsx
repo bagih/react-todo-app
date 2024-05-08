@@ -13,7 +13,7 @@ const Todos = ({ todos, toggleCompletedItem, handleDeleteTodo }) => {
         <div style={styles.container}>
             {todos.map((todo) => {
                 return (
-                    <TodoItem key={todo.id} todo={todo} toggleCompletedItem={toggleCompletedItem} handleDeleteTodo={handleDeleteTodo}/>
+                    <TodoItem key={todo.id} todo={todo} />
                 );
             })}
         </div>
