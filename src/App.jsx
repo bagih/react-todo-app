@@ -19,25 +19,35 @@ function App() {
     {
       id: 1,
       title: 'Pergi mencuci pakaian',
-      completed: false,
+      isCompleted: false,
     },
     {
       id: 2,
       title: 'menyiram tanaman',
-      completed: false,
+      isCompleted: false,
     },
     {
       id: 3,
       title: 'Pergi meeting bersama kontraktor',
-      completed: false
+      isCompleted: false
     },
   ]);
+
+  const toggleCompletedItem = (todoId) => {
+      const updatedTodos = todos.map((todo) => {
+        if(todo.id === todoId){
+          todo.isCompleted = !todo.isCompleted
+        }
+        return todo
+      })
+      setTodos(updatedTodos)
+    }
 
   return (
     <>
       <div style={styles.container}>
         <h1 style={styles.title}>My Todo List</h1>
-        <Todos todos={todos}/>
+        <Todos todos={todos} toggleCompletedItem={toggleCompletedItem}/>
       </div>
     </>
   )
